@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Category;
 use App\Models\Product;
 use Illuminate\Http\Request;
 
@@ -12,7 +13,20 @@ class ProductController extends Controller
 
         $product = Product::findOrFail($id);
 
-        return view('product.show', ['product' => $product]);
+        $categories = Category::where('parent_id', null)
+            ->get();
+
+        $categorySubs = [];
+        foreach ($categories as $category) {
+            $categorySubs[] = [
+                'category' => $category,
+                'subs' => Category::where('parent_id', $category->id)
+                    ->withCount('products')
+                    ->get(),
+            ];
+        }
+
+        return view('product.show', ['product' => $product,'categorySubs' => $categorySubs,]);
     }
 
     public function discounts() {
@@ -20,6 +34,8 @@ class ProductController extends Controller
             ->get();
 
         return view('product.discounts')
-            ->with(['products' => $products]);
+            ->with([
+                'products' => $products,
+            ]);
     }
 }

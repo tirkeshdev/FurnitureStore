@@ -24,7 +24,7 @@
                 </div>
                 <div class="small my-1">
                     @foreach($product->sellers as $seller)
-                        <i class="bi-person-square text-secondary"></i> {{ $seller->name }} {{$loop->last ? '' :','}}
+                        <i class="bi-person-fill text-secondary"></i> {{ $seller->name }} {{$loop->last ? '' :','}}
                     @endforeach
                 </div>
                 @if($product->isDiscount())
