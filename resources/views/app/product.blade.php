@@ -7,8 +7,8 @@
                 <div class="position-absolute">
                     @if($product->isDiscount())
                         <div class="m-1">
-                            <span class="d-inline-block small text-bg-danger bg-opacity-75 rounded px-1">
-                                <i class="bi-check2-square"></i> @lang('app.discount')
+                            <span class="d-inline-block small text-bg-danger rounded px-1">
+                                <i class="bi-percent"></i> @lang('app.discount')
                             </span>
                         </div>
                     @endif

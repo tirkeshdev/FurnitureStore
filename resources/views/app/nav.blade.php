@@ -14,7 +14,7 @@
                         data-bs-toggle="collapse" data-bs-target="#dashboard-collapse{{$categorySub['category']->id}}"
                         aria-expanded="false">
                     <div class="h6">
-                        {{$categorySub['category']->getname()}}
+                        {{$categorySub['category']->getname()}}<small class="text-info">({{$categorySub['category']->child_count}})</small>
                     </div>
                 </button>
                 <div class="collapse" id="dashboard-collapse{{$categorySub['category']->id}}" style="">
@@ -22,7 +22,7 @@
                         @foreach($categorySub['subs'] as $subcategory)
                             <li>
                                 <a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded h6">
-                                    {{$subcategory->getname()}}
+                                    {{$subcategory->getName()}}
                                     <small class="text-warning">({{$subcategory->products_count}})</small>
                                 </a>
                             </li>
