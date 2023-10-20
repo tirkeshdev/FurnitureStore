@@ -7,13 +7,14 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>@yield('title')</title>
     <link rel="stylesheet" href="{{asset('css/bootstrap.min.css')}}">
+    <link rel="icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8-iHPPo851KJ37q5Ut53zYwFj2U0rr-LVr-ImeVakQb-YhytxuD8BOFV1BGIkbxoNeY4&usqp=CAU">
     <link rel="stylesheet" href="{{asset('css/bootstrap-icons.css')}}">
     <script type="text/javascript" src="{{ asset('js/bootstrap.bundle.min.js') }}"></script>
 </head>
-<body class="bg-gradient">
+<body class="bg-light">
 <div class="container-fluid">
     <div class="row">
-        <div class="col-2">
+        <div class="col-2 bg">
             @include('app.nav')
         </div>
         <div class="col-10">

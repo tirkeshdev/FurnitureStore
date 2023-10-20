@@ -15,7 +15,14 @@ class HomeController extends Controller
             ->count();
 
         $discount_products = Product::where('discount_percent' ,'>',0)
-            ->with('category')
+            ->take(9)
+            ->get();
+
+
+        $builts_count = Product::where('built' , true)
+            ->count();
+
+        $built_products = Product::where('built' , true)
             ->take(9)
             ->get();
 
@@ -24,6 +31,8 @@ class HomeController extends Controller
             ->with([
                 'discount_products' => $discount_products,
                 'discounts_count' => $discounts_count,
+                'builts_count' => $builts_count,
+                'built_products' => $built_products,
             ]);
     }
 

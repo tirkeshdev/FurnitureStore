@@ -1,8 +1,8 @@
-<div class="flex-shrink-0 p-3" style="width: 280px;">
-    <a href="/" class="d-flex align-items-center pb-3 mb-3 link-body-emphasis text-decoration-none border-bottom">
-        <span class="fs-5 fw-semibold">@lang('app.appName')</span>
+<div class="flex-shrink-0 p-3 sticky-top" style="width: 280px;">
+    <a href="/" class="p-2 mb-3 link-body-emphasis text-decoration-none" style="border: black solid 3px">
+        <span class="fs-5 fw-semibold">@lang('app.appName')</span><i class="bi-house-check ps-1 h5"></i>
     </a>
-    <ul class="list-unstyled ps-0">
+    <ul class="list-unstyled ps-0 py-4">
         <li class="mb-1">
             <a href="/" class="h6 text-decoration-none d-inline-flex align-items-center ps-3">
                 Home

@@ -27,7 +27,9 @@
                 </div>
                 <div class="fs-5 mb-2">
                     @foreach($product->sellers as $seller)
-                        <i class="bi-person-fill text-secondary"></i> {{ $seller->name }} {{$loop->last ? '' :','}}
+                        <a href="{{route('seller_show', $seller->id)}}" class="text-decoration-none link-dark">
+                            <i class="bi-person-fill text-secondary"></i> {{ $seller->name }} {{$loop->last ? '' :','}}
+                        </a>
                     @endforeach
                 </div>
                 @if($product->isDiscount())

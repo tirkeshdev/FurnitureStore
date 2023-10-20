@@ -26,4 +26,13 @@ class ProductController extends Controller
                 'products' => $products,
             ]);
     }
+    public function builts() {
+        $products = Product::where('built', true)
+            ->get();
+
+        return view('product.builts')
+            ->with([
+                'products' => $products,
+            ]);
+    }
 }
