@@ -1,5 +1,5 @@
 <div class="flex-shrink-0 p-3 sticky-top" style="width: 280px;">
-    <a href="/" class="p-2 mb-3 link-body-emphasis text-decoration-none" style="border: black solid 3px">
+    <a href="/" class="p-2 mb-3 link-body-emphasis text-decoration-none bg-warning bg-opacity-50" style="border: black solid 3px">
         <span class="fs-5 fw-semibold">@lang('app.appName')</span><i class="bi-house-check ps-1 h5"></i>
     </a>
     <ul class="list-unstyled ps-0 py-4">
@@ -14,7 +14,7 @@
                         data-bs-toggle="collapse" data-bs-target="#dashboard-collapse{{$categorySub['category']->id}}"
                         aria-expanded="false">
                     <div class="h6">
-                        {{$categorySub['category']->getname()}}<small class="text-info">({{$categorySub['category']->child_count}})</small>
+                        {{$categorySub['category']->getname()}} <small class="text-info">({{$categorySub['category']->child_count}})</small>
                     </div>
                 </button>
                 <div class="collapse" id="dashboard-collapse{{$categorySub['category']->id}}" style="">
@@ -23,8 +23,10 @@
                             <li>
                                 <a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded h6">
                                     {{$subcategory->getName()}}
-                                    <small class="text-warning">({{$subcategory->products_count}})</small>
                                 </a>
+                                <small class="text-warning h6">
+                                    ({{$subcategory->products_count}})
+                                </small>
                             </li>
                         @endforeach
                     </ul>

@@ -12,12 +12,12 @@
     <script type="text/javascript" src="{{ asset('js/bootstrap.bundle.min.js') }}"></script>
 </head>
 <body class="bg-light">
-<div class="container-fluid">
-    <div class="row">
-        <div class="col-2 bg">
+<div class="container-fluid bg-warning bg-opacity-25">
+    <div class="row  gx-3">
+        <div class="col-2 ">
             @include('app.nav')
         </div>
-        <div class="col-10">
+        <div class="col-10 bg-success bg-opacity-25">
             @include('app.alert')
             @yield('body')
         </div>

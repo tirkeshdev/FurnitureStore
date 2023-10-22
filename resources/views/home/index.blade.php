@@ -7,7 +7,7 @@
 @section('body')
         @include('app.banner')
         <div class="py-3">
-            <a href="{{route('discounts')}}" class="text-danger h3 text-decoration-none">
+            <a href="{{route('discounts')}}" class="text-danger h1 text-decoration-none">
                 @lang('app.discount')
                 <small class="text-warning">({{$discounts_count}})</small>
             </a>
@@ -20,9 +20,9 @@
             @endforeach
         </div>
         <div class="py-3">
-            <a href="{{route('builts')}}" class="text-danger h3 text-decoration-none">
+            <a href="{{route('builts')}}" class="text-warning h1 text-decoration-none">
                 @lang('app.built')
-                <small class="text-warning">({{$builts_count}})</small>
+                <small class="text-danger">({{$builts_count}})</small>
             </a>
         </div>
         <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-4 mb-4">

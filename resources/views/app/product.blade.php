@@ -1,4 +1,4 @@
-<div class="position-relative bg-white border rounded">
+<div class="position-relative bg-secondary bg-opacity-50 border rounded">
     <div class="row g-0">
         <div class="col-6">
             <div class="d-flex">

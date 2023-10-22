@@ -17,18 +17,21 @@ class ProductController extends Controller
         return view('product.show', ['product' => $product]);
     }
 
-    public function discounts() {
-        $products = Product::where('discount_percent' ,'>',0)
-            ->get();
+    public function discounts()
+    {
+        $products = Product::where('discount_percent', '>', 0)
+            ->paginate(21);
 
         return view('product.discounts')
             ->with([
                 'products' => $products,
             ]);
     }
-    public function builts() {
+
+    public function builts()
+    {
         $products = Product::where('built', true)
-            ->get();
+            ->paginate(21);
 
         return view('product.builts')
             ->with([
