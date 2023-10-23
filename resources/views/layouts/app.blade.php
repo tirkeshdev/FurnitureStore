@@ -13,7 +13,7 @@
 </head>
 <body class="bg-light">
 <div class="container-fluid bg-warning bg-opacity-25">
-    <div class="row  gx-2">
+    <div class="row  gx-1">
         <div class="col-2 ">
             @include('app.nav')
         </div>

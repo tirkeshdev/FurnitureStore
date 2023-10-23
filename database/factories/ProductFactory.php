@@ -35,7 +35,7 @@ class ProductFactory extends Factory
         $name = fake()->streetName();
         $name_ru = null;
         $discount = fake()->boolean(30);
-        $built = fake()->boolean(50);
+        $built = fake()->boolean(20);
         return [
             'brand_id' => $brand->id,
             'color_id' => $color->id,

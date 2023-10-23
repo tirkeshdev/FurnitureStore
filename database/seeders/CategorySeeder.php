@@ -14,11 +14,11 @@ class CategorySeeder extends Seeder
     public function run(): void
     {
         $objs = [
-            [null, 'Çagalar üçin mebel', 'Детская комната', null],
-            [null, 'Aşhana üçin mebel', 'Кухня', null],
-            [null, 'Ýatylyan otag üçin mebel', 'Спальня', null],
-            [null, 'Banya üçin mebel', 'Ванная', null],
-            [null, 'Myhman otagy üçin mebel', 'Гостинная', null],
+            [null, 'Çagalar otagy', 'Детская комната', null],
+            [null, 'Aşhana', 'Кухня', null],
+            [null, 'Ýatylyan otag', 'Спальня', null],
+            [null, 'Banya', 'Ванная', null],
+            [null, 'Myhman otagy', 'Гостинная', null],
             [1 , 'Şkaflar', 'Шкафы', 'img_2.jpg'],
             [1 , 'Kompýuter stollary', 'Комьютерные столы', 'img_1.jpg'],
             [1 , 'Diwar tekjeleri', 'Полки навесные', 'img_3.jpg'],
@@ -28,7 +28,7 @@ class CategorySeeder extends Seeder
             [2 , 'Aşhana stollary', 'Кухонные столы', 'img_7.jpg'],
             [3 , 'Krowatlar', 'Кровати в спальню', 'img_8.jpg'],
             [3 , 'Şkaflar', 'Шкафы для одежды', 'img_9.jpg'],
-            [3 , 'Ýüz görülýän aýnalar', 'Зеркала для спальни', 'img_10.jpg'],
+            [3 , 'Spalnynyň aýnalary', 'Зеркала для спальни', 'img_10.jpg'],
             [3 , 'Çekmeler', 'Ночные тумбочки', 'img_11.jpg'],
             [4 , 'Rakowina', 'Раковины', 'img_12.jpg'],
             [4 , 'Çekmeler', 'Тумбочки', 'img_13.jpg'],

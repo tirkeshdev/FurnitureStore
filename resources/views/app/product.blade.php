@@ -1,13 +1,13 @@
-<div class="position-relative bg-secondary bg-opacity-50 border rounded">
+<div class="position-relative bg-dark-subtle border rounded">
     <div class="row g-0">
-        <div class="col-6">
+        <div class="col-7">
             <div class="d-flex">
                 <img src="{{asset('img/'. $product->category->image)}}"
-                     alt="{{ $product->name }}" class="img-fluid rounded-start" style="width: 220px;height: 220px">
+                     alt="{{ $product->name }}" class="img-fluid rounded-start" style="width: 240px;height: 240px">
                 <div class="position-absolute">
                     @if($product->isDiscount())
                         <div class="m-1">
-                            <span class="d-inline-block small text-bg-danger rounded px-1">
+                            <span class="d-inline-block small text-bg-danger bg-opacity-100 rounded px-1">
                                 <i class="bi-percent"></i> @lang('app.discount')
                             </span>
                         </div>
@@ -22,9 +22,9 @@
                         {{ $product->name }}
                     </a>
                     <div>
-                        <a href="/" class="link-primary opacity-50 text-decoration-none">
+                        <div class="text-primary opacity-75">
                             {{$product->category->getName()}}
-                        </a>
+                        </div>
                     </div>
                 </div>
                 <div class="small my-1">

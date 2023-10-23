@@ -21,7 +21,7 @@
                     <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
                         @foreach($categorySub['subs'] as $subcategory)
                             <li>
-                                <a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded h6">
+                                <a href="{{route('index', $subcategory->id)}}" class="link-body-emphasis d-inline-flex text-decoration-none rounded h6">
                                     {{$subcategory->getName()}}
                                 </a>
                                 <small class="text-warning h6">

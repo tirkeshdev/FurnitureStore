@@ -7,12 +7,12 @@
         <div class="row g-4 mb-4">
             <div class="col-10 col-sm-8 col-md-6 col-lg-4">
                 <div class="d-flex">
-                    <img src="{{  $product->image}}"
+                    <img src="{{  asset('img/'.$product->category->image)}}"
                          alt="{{ $product->name}}" class="img-fluid border rounded" style="height: 400px;">
                     <div class="position-absolute">
                         @if($product->isDiscount())
                             <div class="m-2">
-                                <span class="d-inline-block small text-bg-danger rounded py-1 px-2">
+                                <span class="d-inline-block small text-bg-danger bg-opacity-100 rounded py-1 px-2">
                                     <i class="bi-percent"></i> @lang('app.discount')
                                 </span>
                             </div>
@@ -23,7 +23,11 @@
             <div class="col">
                 <div class="mb-2">
                     <span class="fs-5 fw-semibold">{{ $product->name }}</span>
-                    <div class="text-secondary">{{ $product->category->getName() }}</div>
+                    <div class="h6 py-1">
+                        <a href="{{route('index', $product->category->id)}}" class="text-secondary text-decoration-none">
+                            {{ $product->category->getName() }}
+                        </a>
+                    </div>
                 </div>
                 <div class="fs-5 mb-2">
                     @foreach($product->sellers as $seller)

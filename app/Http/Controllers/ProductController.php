@@ -8,6 +8,18 @@ use Illuminate\Http\Request;
 
 class ProductController extends Controller
 {
+    public function index($id)
+    {
+        $category = Category::findOrFail($id);
+
+        $products = Product::where('category_id', $id)
+            ->paginate(12);
+
+
+        return view('product.index', ['products' => $products, 'category' => $category]);
+    }
+
+
     public function show($id)
     {
 
@@ -20,7 +32,7 @@ class ProductController extends Controller
     public function discounts()
     {
         $products = Product::where('discount_percent', '>', 0)
-            ->paginate(21);
+            ->paginate(12);
 
         return view('product.discounts')
             ->with([
@@ -31,7 +43,7 @@ class ProductController extends Controller
     public function builts()
     {
         $products = Product::where('built', true)
-            ->paginate(21);
+            ->paginate(12);
 
         return view('product.builts')
             ->with([
