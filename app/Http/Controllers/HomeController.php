@@ -16,6 +16,7 @@ class HomeController extends Controller
 
         $discount_products = Product::where('discount_percent' ,'>',0)
             ->take(9)
+            ->with('category')
             ->get();
 
 

@@ -2,8 +2,8 @@
     <div class="row g-0">
         <div class="col-6">
             <div class="d-flex">
-                <img src="{{ $product->image}}"
-                     alt="{{ $product->name }}" class="img-fluid rounded-start">
+                <img src="{{asset('img/'. $product->category->image)}}"
+                     alt="{{ $product->name }}" class="img-fluid rounded-start" style="width: 220px;height: 220px">
                 <div class="position-absolute">
                     @if($product->isDiscount())
                         <div class="m-1">
@@ -21,6 +21,11 @@
                     <a href="{{ route('show', $product->id) }}" class="link-dark text-decoration-none stretched-link">
                         {{ $product->name }}
                     </a>
+                    <div>
+                        <a href="/" class="link-primary opacity-50 text-decoration-none">
+                            {{$product->category->getName()}}
+                        </a>
+                    </div>
                 </div>
                 <div class="small my-1">
                     @foreach($product->sellers as $seller)

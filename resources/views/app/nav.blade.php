@@ -14,7 +14,7 @@
                         data-bs-toggle="collapse" data-bs-target="#dashboard-collapse{{$categorySub['category']->id}}"
                         aria-expanded="false">
                     <div class="h6">
-                        {{$categorySub['category']->getname()}} <small class="text-info">({{$categorySub['category']->child_count}})</small>
+                        {{$categorySub['category']->getname()}}
                     </div>
                 </button>
                 <div class="collapse" id="dashboard-collapse{{$categorySub['category']->id}}" style="">

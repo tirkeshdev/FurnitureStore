@@ -17,6 +17,7 @@ return new class extends Migration
             $table->foreign('parent_id')->references('id')->on('categories')->nullOnDelete();
             $table->string('name');
             $table->string('name_ru')->nullable();
+            $table->string('image')->nullable();
         });
     }
 
